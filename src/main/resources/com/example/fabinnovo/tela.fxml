@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="javafxcrud.OrderController">
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="nameField" promptText="Name"/>
+            <TextField fx:id="foodItemField" promptText="Food Item"/>
+            <TextField fx:id="quantityField" promptText="Quantity"/>
+            <TextField fx:id="priceField" promptText="Price"/>
+            <Button text="Add Order" onAction="#handleAddOrder"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn fx:id="nameCol" text="Name"/>
+                <TableColumn fx:id="foodItemCol" text="Food Item"/>
+                <TableColumn fx:id="quantityCol" text="Quantity"/>
+                <TableColumn fx:id="priceCol" text="Price"/>
+                <TableColumn fx:id="totalCol" text="Total"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10">
+            <Button text="Delete Order" onAction="#handleDeleteOrder"/>
+        </HBox>
+    </bottom>
+</BorderPane>
